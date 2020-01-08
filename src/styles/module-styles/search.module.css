@@ -1,0 +1,35 @@
+.header__main {
+	display: flex;
+	position: fixed;
+
+	height: 30px;
+	width: 100%;
+
+	top: 0; 
+
+	padding: 10px;
+
+	background-color: #56aafb;
+	z-index: 1;
+}
+
+.header__head {
+
+}
+
+.header__main__title {
+	display: flex;
+	align-items: center;
+
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 22px;
+	
+	font-family: sans-serif;
+	margin-left: 270px;
+}
+
+.header__main__title__secondary {
+	font-size: 18px;
+	margin-left: 15px;
+}
