@@ -73,7 +73,6 @@ const conf = {
           publicPath: 'assets/[name].[ext]'
         },
       },
-      
       // {
       //   enforce: 'pre',
       //   test: /\.js$/,

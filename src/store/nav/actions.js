@@ -13,6 +13,12 @@ export const getUser = () => {
                     type: VK_API_GET_USER_SUCCESS,
                     payload: {
                         user: response,
+                        type: {
+                            user: true,
+                            friends: false,
+                            groups: false,
+                            wall: false,
+                        }
                     }
                 })
             });
@@ -28,6 +34,12 @@ export const getFriends = () => {
                     type: VK_API_FRIENDS_GET_SUCCESS,
                     payload: {
                         user: response,
+                        type: {
+                            usr: false,
+                            friends: true,
+                            groups: false,
+                            wall: false,
+                        }
                     }
                 })
             });
@@ -43,6 +55,12 @@ export const getGroups = () => {
                     type: VK_API_GROUPS_GET_SUCCESS,
                     payload: {
                         user: response.response,
+                        type: {
+                            user: false,
+                            friends: false,
+                            groups: true,
+                            wall: false,
+                        }
                     }
                 })
             });
@@ -58,6 +76,12 @@ export const getWall = () => {
                     type: VK_API_WALL_GET_SUCCESS,
                     payload: {
                         user: response.response,
+                        type: {
+                            user: false,
+                            friends: false,
+                            groups: false,
+                            wall: true,
+                        }
                     }
                 })
             });

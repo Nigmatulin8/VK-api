@@ -66,7 +66,9 @@ export default class extends React.Component {
 
                 <div className={styles.body__description}> 
                     <div className={styles.field__description__name}>Birth Date: </div>
-                    <div className={styles.field__description__value}>{this.props.user.bdate}</div>
+                    <div className={styles.field__description__value}>
+                        {this.props.user.bdate ? this.props.user.bdate : 'Not specified'}
+                    </div>
                 </div>
 
                 <div className={styles.body__description}> 
@@ -78,17 +80,23 @@ export default class extends React.Component {
 
                 <div className={styles.body__description}> 
                     <div className={styles.field__description__name}>Sex: </div>
-                    <div className={styles.field__description__value}>{SEX[this.props.user.sex]}</div>
+                    <div className={styles.field__description__value}>
+                        {this.props.user.sex ? SEX[this.props.user.sex] : 'Not specified'}
+                    </div>
                 </div>
 
                 <div className={styles.body__description}> 
                     <div className={styles.field__description__name}>About: </div>
-                    <div className={styles.field__description__value}>{this.props.user.about ? this.props.user.about : 'Not specified'}</div>
+                    <div className={styles.field__description__value}>
+                        {this.props.user.about ? this.props.user.about : 'Not specified'}
+                    </div>
                 </div>
 
                 <div className={styles.body__description}> 
                     <div className={styles.field__description__name}>Status: </div>
-                    <div className={styles.field__description__value}>{this.props.user.status ? this.props.user.status : 'Not specified'}</div>
+                    <div className={styles.field__description__value}>
+                        {this.props.user.status ? this.props.user.status : 'Not specified'}
+                    </div>
                 </div>
 
                 <div className={styles.field__heading}>Secondary information: </div>
@@ -105,40 +113,52 @@ export default class extends React.Component {
 
                 <div className={styles.body__description}> 
                     <div className={styles.field__description__name}>Site: </div>
-                    <div className={styles.field__description__value}>{this.props.user.site ? this.props.user.site : 'Not specified'}</div>
+                    <div className={styles.field__description__value}>
+                        {this.props.user.site ? this.props.user.site : 'Not specified'}
+                    </div>
                 </div>
 
                 <div className={styles.body__description}> 
                     <div className={styles.field__description__name}>Followers counter: </div>
-                    <div className={styles.field__description__value}>{this.props.user.followers_count}</div>
+                    <div className={styles.field__description__value}>
+                        {this.props.user.followers_count ? this.props.user.followers_count : 0}
+                    </div>
                 </div>
 
                 <div className={styles.field__heading}>Life position: </div>
 
                 <div className={styles.body__description}> 
                     <div className={styles.field__description__name}>Alcohol: </div>
-                    <div className={styles.field__description__value}>{ALCOHOL[this.props.user.personal.alcohol]}</div>
+                    <div className={styles.field__description__value}>
+                        {this.props.user.personal.alcohol ? ALCOHOL[this.props.user.personal.alcohol] : 'Not specified'}
+                    </div>
                 </div>
                 
                 <div className={styles.body__description}> 
                     <div className={styles.field__description__name}>Smoking: </div>
-                    <div className={styles.field__description__value}>{SMOKING[this.props.user.personal.smoking]}</div>
+                    <div className={styles.field__description__value}>
+                        {this.props.user.personal.smoking ? SMOKING[this.props.user.personal.smoking] : 'Not specified'}
+                    </div>
                 </div>
 
                 <div className={styles.body__description}> 
                     <div className={styles.field__description__name}>Life main: </div>
-                    <div className={styles.field__description__value}>{LIFE_MAIN[this.props.user.personal.life_main]}</div>
+                    <div className={styles.field__description__value}>
+                        {this.props.user.personal.life_main ? LIFE_MAIN[this.props.user.personal.life_main] : 'Not specified'}
+                    </div>
                 </div>
 
                 <div className={styles.body__description}> 
                     <div className={styles.field__description__name}>People main: </div>
-                    <div className={styles.field__description__value}>{PEOPLE_MAIN[this.props.user.personal.people_main]}</div>
+                    <div className={styles.field__description__value}>
+                        {this.props.user.personal.people_main ? PEOPLE_MAIN[this.props.user.personal.people_main] : 'Not specified'}
+                    </div>
                 </div>
 
                 <div className={styles.body__description}> 
                     <div className={styles.field__description__name}>Religion: </div>
-                    <div className={styles.field__description__value}>{this.props.user.personal.resigion ? 
-                        this.props.user.personal.resigion : 'Not specified'}
+                    <div className={styles.field__description__value}>
+                        {this.props.user.personal.resigion ? this.props.user.personal.resigion : 'Not specified'}
                     </div>
                 </div>
 
