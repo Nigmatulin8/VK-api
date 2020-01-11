@@ -33,7 +33,7 @@ export default class extends React.Component {
                         </div>
                     </div>
 
-                    <img src="dist/img/sad_cat.png" alt="Error icon"/>
+                    <img src="dist/img/sad_cat.png" alt="Error page icon"/>
                 </div>
             )
         }
