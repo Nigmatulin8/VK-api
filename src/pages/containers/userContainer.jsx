@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import UserComponent from '../components/userComponent.jsx';
+
 import { vkAuth } from '../../store/user/actions.js';
 
 class UsersContainer extends React.Component {
@@ -14,10 +15,10 @@ class UsersContainer extends React.Component {
 
     render() {
         if(this.props.user) {
-            return <UserComponent user={this.props.user} />
+            return <UserComponent user={this.props.user} /> 
         }
         else {
-            return <div> Wait...</div>
+            return <div> Loading ... </div>
         }
     }
 }
