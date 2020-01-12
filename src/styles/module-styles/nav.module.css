@@ -31,3 +31,9 @@
 .nav__action__btn:hover {
 	background-color: rgb( 75, 183, 141 );
 }
+
+@media screen and (max-width: 375px) {
+	.nav__main {
+		background: #ffffff;
+	}
+}

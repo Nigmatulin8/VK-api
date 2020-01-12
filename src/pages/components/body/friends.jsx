@@ -18,7 +18,7 @@ export default class extends React.Component {
 
     render() {
         let friends = this.props.user.map((friend) => {
-            let lastSeen = dayjs.unix(friend.last_seen.time).format('HH:mm');
+            let lastSeen =  friend.last_seen ? dayjs.unix(friend.last_seen.time).format('HH:mm') : 'Hidden';
 
             return (
                 <div className={styles.body__friends__item} key={friend.id}>
@@ -32,7 +32,8 @@ export default class extends React.Component {
                         <div className={friend.online ? styles.body__friends__online__dot : styles.body__friends__offline__dot}>  
                         </div>
                         {friend.online ? 'Online' : 'Offline'} 
-                        <img className={styles.body__platform} src={PLATFORM[friend.last_seen.platform]} />
+                        <img className={styles.body__platform} 
+                            src={friend.last_seen ? PLATFORM[friend.last_seen.platform] : 'dist/img/unknown.png'} />
                     </div>
                     <div className={styles.body__friends__last__seen}>
                         <div><strong>Last Seen: </strong> {lastSeen}</div>
@@ -41,22 +42,22 @@ export default class extends React.Component {
                         <button className={styles.body__friends__more__btn} onClick={this.showInfo}>Show more</button>
                         <div className={styles.dropdown__content}>
                             <div className={styles.friend__more__info}>
-                                <strong>Sex: </strong> {SEX[friend.sex]} 
+                                <strong>Sex: </strong> <div>{friend.sex ? SEX[friend.sex] : 'Not specified'}</div>
                             </div>
                             <div className={styles.friend__more__info}>
-                                <strong>City: </strong> {friend.city ? friend.city.title : 'Not specified'} 
+                                <strong>City: </strong> <div>{friend.city ? friend.city.title : 'Not specified'}</div>
                             </div>
                             <div className={styles.friend__more__info}>
-                                <strong>Relations: </strong> {RELATIONS[friend.relation]} 
+                                <strong>Relations: </strong> <div>{friend.relation ? RELATIONS[friend.relation] : 'Not specified'}</div>
                             </div>
                             <div className={styles.friend__more__info}>
-                                <strong>User ID: </strong> {friend.id} 
+                                <strong>User ID: </strong> <div>{friend.id}</div>
                             </div>
                             <div className={styles.friend__more__info}>
-                                <strong>Domain: </strong> {friend.domain} 
+                                <strong>Domain: </strong> <div>{friend.domain}</div>
                             </div>
                             <div className={styles.friend__more__info}>
-                                <strong>Nickname: </strong> {friend.nickname ? friend.nickname : 'Not specified'} 
+                                <strong>Nickname: </strong> <div>{friend.nickname ? friend.nickname : 'Not specified'}</div>
                             </div>
                         </div>
                     </div>

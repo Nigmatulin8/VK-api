@@ -13,7 +13,7 @@ export default class extends React.Component {
                     <img className={styles.body__group__photo} src={item.photo_200} alt="Group photo" />
 
                     <div className={styles.group__more__info}>
-                        <strong>Members count: </strong> {item.members_count} 
+                        <strong>Members: </strong> {item.members_count} 
                     </div>
                 </div>
             )

@@ -34,3 +34,27 @@
 	margin-left: 260px;
 	padding-top: 10px;
 }
+
+@media screen and (max-width: 375px) { 
+	.app__screen {
+		width: 375px;
+		
+		display: flex;
+
+		margin: 50px auto 0;
+		padding: 0;
+
+		position: relative;
+	}
+
+	.app__left, .app__left__side {
+		display: none;
+	}
+
+	.app__right__side {
+		width: 375px;
+
+		margin-left: 0px;
+		padding-top: 10px;
+	}
+}

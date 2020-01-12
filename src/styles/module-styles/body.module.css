@@ -404,3 +404,161 @@
 
 	margin: 0 10px;
 }
+
+@media screen and (max-width: 375px) { 
+	.field__heading {
+		font-size: 18px;
+		font-weight: 600;
+		padding: 0 0 10px 0;
+	}
+
+	.body__description {
+		display: flex;
+
+		margin-bottom: 10px;
+
+		font-size: 14px;
+		
+		margin-left: 10px;
+	}
+
+	.field__description__value {
+		width: 260px;
+	}
+
+	.field__description__name {
+		width: 90px;
+		margin: 0 10px;
+		color: #828282;
+	}
+
+	.body__friends__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		width: 370px;
+
+		padding-left: 5px;
+	}
+
+	.body__friends__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		width: 165px;
+		
+		margin: 0 5px 5px 0;
+
+		background: white;
+	}
+
+	.body__friends__photo {
+		width: 165px;
+		height: 165px;
+	}
+
+	.dropdown__content__active {
+		display: flex;
+		flex-direction: column;
+
+		position: absolute;
+
+		width: 165px;
+
+		box-sizing: border-box;
+		
+		background-color: #f9f9f9;
+
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+		padding: 0 10px;
+
+		z-index: 1;
+	}
+
+	.friend__more__info {
+		display: flex;
+		justify-content: flex-start;
+
+		width: 160px;
+
+		padding: 5px;
+		margin-left: 5px;
+
+		word-break: break-all;
+	}
+
+	.friend__more__info strong {
+		margin-right: 1px;
+		word-break: normal;
+	}
+
+	.body__friend__name {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		font-size: 18px;
+		margin-bottom: 5px;
+	}
+
+	.body__groups__list {
+		width: 375px;
+
+		display: flex;
+		flex-wrap: wrap;
+
+		box-sizing: border-box;
+
+		padding-left: 15px;
+	}
+
+	.body__groups__item {
+		display: flex;
+		flex-direction: column;
+
+		justify-content: center;
+		align-items: center;
+
+		width: 170px;
+
+		background: #ffffff;
+	}
+
+	.body__group__photo {
+		width: 165px;
+		height: 165px;
+	}
+	
+	.body__posts {
+		margin-left: 0px;
+	}
+
+	.body__post__item {
+		width: 355px;
+
+		background: #ffffff;
+		margin: 0 0 10px 8px;
+		border: 1px solid rgba(65, 65, 65, 0.2);
+	}
+
+	.body__post__body__photo img {
+		width: 348px;
+		margin-bottom: 2px;
+	}
+
+	.body__post__activity {
+		display: flex;
+		justify-content: space-between;
+		width: 355px;
+
+		padding: 5px 5px 5px 20px;
+		margin: 0;
+	
+		box-sizing: border-box;
+		border-top: 1px solid rgba(100, 100, 100, 0.2)
+	}
+}
