@@ -1,4 +1,4 @@
-export const APP_ID = 7263349;
+export const APP_ID = 'APP ID';
 export const ACCESS_VALUES = 2 | 4 | 16 | 1024 | 131072 | 262144 | 4194304;
 export const API_VERSION = '5.103';
 export const PLATFORM = {
