@@ -90,6 +90,24 @@ export const SEX = {
 	1: 'Female',
 	2: 'Male',
 };
+export const DOC_TYPE = {
+	'torrent': 'dist/img/formats/torrent.png',
+	'djvu': 'dist/img/formats/djvu.png',
+	'pptx': 'dist/img/formats/pptx.png',
+	'xlsx': 'dist/img/formats/xlsx.png',
+	'docx': 'dist/img/formats/doc.png',
+	'xls': 'dist/img/formats/xlsx.png',
+	'gif': 'dist/img/formats/gif.png',
+	'doc': 'dist/img/formats/doc.png',
+	'rar': 'dist/img/formats/rar.png',
+	'pdf': 'dist/img/formats/pdf.png',
+	'rtf': 'dist/img/formats/rtf.png',
+	'odt': 'dist/img/formats/odt.png',
+	'cpp': 'dist/img/formats/cpp.png',
+	'ppt': 'dist/img/formats/ppt.png',
+	'mp3': 'dist/img/formats/mp3.png',
+	'js': 'dist/img/formats/js.png',
+};
 export const USER_FIELDS = `
 	verified,
     sex,
@@ -128,6 +146,7 @@ export const FRIENDS_FIELDS = `
 	timezone,
 	contacts`;
 export const GROUPS_FIELDS = `members_count`;
+
 /**
  * @string nom - именительный
  * @string gen — родительный;
@@ -136,3 +155,4 @@ export const GROUPS_FIELDS = `members_count`;
  * @string ins — творительный;
  * @string abl — предложный.
  */
+ 

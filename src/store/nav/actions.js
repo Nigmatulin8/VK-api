@@ -4,6 +4,7 @@ export const VK_API_GET_USER_SUCCESS = 'VK_API_GET_USER_SUCCESS';
 export const VK_API_FRIENDS_GET_SUCCESS = 'VK_API_FRIENDS_GET_SUCCESS';
 export const VK_API_GROUPS_GET_SUCCESS = 'VK_API_GROUPS_GET_SUCCESS';
 export const VK_API_WALL_GET_SUCCESS = 'VK_API_WALL_GET_SUCCESS';
+export const VK_API_DOC_GET_SUCCESS = 'VK_API_DOC_GET_SUCCESS';
 
 export const getUser = () => {
     return dispatch => {
@@ -18,6 +19,7 @@ export const getUser = () => {
                             friends: false,
                             groups: false,
                             wall: false,
+                            docs: false,
                         }
                     }
                 })
@@ -39,6 +41,7 @@ export const getFriends = () => {
                             friends: true,
                             groups: false,
                             wall: false,
+                            docs: false,
                         }
                     }
                 })
@@ -60,6 +63,7 @@ export const getGroups = () => {
                             friends: false,
                             groups: true,
                             wall: false,
+                            docs: false,
                         }
                     }
                 })
@@ -81,6 +85,29 @@ export const getWall = () => {
                             friends: false,
                             groups: false,
                             wall: true,
+                            docs: false,
+                        }
+                    }
+                })
+            });
+        })
+    }
+}
+
+export const getDoc = () => {
+    return dispatch => {
+        new Promise(() => {
+            VK.api('docs.get', { "v":API_VERSION }, response => {
+                dispatch({
+                    type: VK_API_DOC_GET_SUCCESS,
+                    payload: {
+                        user: response.response,
+                        type: {
+                            user: false,
+                            friends: false,
+                            groups: false,
+                            wall: false,
+                            docs: true,
                         }
                     }
                 })

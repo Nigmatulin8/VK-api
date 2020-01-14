@@ -5,6 +5,7 @@ import User from './body/user.jsx';
 import Friends from './body/friends.jsx';
 import Groups from './body/groups.jsx';
 import Wall from './body/wall.jsx';
+import Docs from './body/docs.jsx';
 
 export default class extends React.Component {
     render() {
@@ -19,6 +20,9 @@ export default class extends React.Component {
         }
         else if ((this.props.user && this.props.type === '') || this.props.type.user){
             return <User user={this.props.user} />
+        }
+        else if(this.props.type.docs && this.props.user.items.length !== 0) {
+            return <Docs user={this.props.user} />
         }
         else {
             return (

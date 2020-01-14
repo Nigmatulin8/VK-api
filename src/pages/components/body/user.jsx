@@ -57,6 +57,9 @@ export default class extends React.Component {
     render() {
         return (
             <div className={styles.body__information}>
+                <div className={styles.user__photo__mobile}>
+                    <img src={this.props.user.photo_max_orig} alt='photo' />
+                </div>
                 <div className={styles.field__heading}>General information: </div>
 
                 <div className={styles.body__description}> 

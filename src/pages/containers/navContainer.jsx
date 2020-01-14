@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import NavComponent from '../components/navComponent.jsx';
-import { getUser, getFriends, getGroups, getWall } from '../../store/nav/actions.js';
+import { getUser, getFriends, getGroups, getWall, getDoc } from '../../store/nav/actions.js';
 
 class UsersContainer extends React.Component {
     state = {
@@ -15,6 +15,7 @@ class UsersContainer extends React.Component {
                     getFriends={this.props.getFriends}
                     getGroups={this.props.getGroups}
                     getWall={this.props.getWall}
+                    getDoc={this.props.getDoc}
                 />
     }
 }
@@ -30,6 +31,7 @@ const mapDispatchToProps = {
     getFriends,
     getGroups,
     getWall,
+    getDoc,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);

@@ -3,6 +3,7 @@ import {
     VK_API_FRIENDS_GET_SUCCESS, 
     VK_API_GROUPS_GET_SUCCESS,
     VK_API_WALL_GET_SUCCESS,
+    VK_API_DOC_GET_SUCCESS,
 } from "./actions";
 
 const defaultState = {
@@ -34,6 +35,13 @@ export const navReducer = (state = defaultState, action) => {
             }
 
         case VK_API_WALL_GET_SUCCESS: 
+            return {
+                ...state,
+                user: action.payload.user,
+                type: action.payload.type,
+            }
+
+        case VK_API_DOC_GET_SUCCESS: 
             return {
                 ...state,
                 user: action.payload.user,
